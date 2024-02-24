@@ -1,0 +1,35 @@
+<div
+  class={`-top-1/2 -left-1/2 -bottom-1/2 -rigth-1/2 bg-repeat bg-transparent fixed w-[200%] h-[200%] z-[999] pointer-events-none`}
+>
+</div>
+
+<style>
+  div {
+    background-image: url("./noise.png");
+    animation: noise 15s infinite;
+    mix-blend-mode: multiply;
+    opacity: 0.1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    div {
+      animation: none;
+    }
+  }
+  @keyframes noise {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(-1%, -1%);
+    }
+    50% {
+      transform: translate(0%, -1%);
+    }
+    75% {
+      transform: translate(-1%, -2%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+</style>
