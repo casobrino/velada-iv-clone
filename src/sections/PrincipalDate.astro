@@ -1,0 +1,62 @@
+<section
+  class="mt-32 mx-auto flex flex-col justify-center items-center text-center"
+>
+  <h2 class="text-primary text-center uppercase text-5xl font-semibold">
+    4 de Marzo <span aria-hidden class="hidden md:inline"> ⚫</span>
+    <br aria-hidden class="block md:hidden" />
+    <span>
+      <script is:inline>
+        const END_DATE = 1709575200000;
+        const d = new Date(END_DATE);
+        const date = d.toLocaleTimeString("es-ES", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        //get Current Timezone
+        const tzOffser = d.getTimezoneOffset() / 60;
+        console.log(tzOffser);
+        const TZ_DICTIONARY = {
+          "-12": "Etc/GMT+12",
+          "-11": "Etc/GMT+11",
+          "-10": "Etc/GMT+10",
+          "-9": "Etc/GMT+9",
+          "-8": "Etc/GMT+8",
+          "-7": "Etc/GMT+7",
+          "-6": "Etc/GMT+6",
+          "-5": "Etc/GMT+5",
+          "-4": "Etc/GMT+4",
+          "-3": "Etc/GMT+3",
+          "-2": "Etc/GMT+2",
+          "-1": "Etc/GMT+1",
+          "0": "Etc/GMT",
+          "1": "Etc/GMT-1",
+          "2": "Etc/GMT-2",
+          "3": "Etc/GMT-3",
+          "4": "Etc/GMT-4",
+          "5": "Etc/GMT-5",
+          "6": "Etc/GMT-6",
+          "7": "Etc/GMT-7",
+          "8": "Etc/GMT-8",
+          "9": "Etc/GMT-9",
+          "10": "Etc/GMT-10",
+          "11": "Etc/GMT-11",
+          "12": "Etc/GMT-12",
+        };
+
+        const selfScript = document.currentScript;
+        selfScript.parentNode.innerHTML = `${date}H ${TZ_DICTIONARY[tzOffser]}`;
+      </script>
+    </span>
+  </h2>
+  <h3 class="uppercase text-2xl font-medium flex flex-col max-w-sm mt-6">
+    <span>Evento de Presentación</span>
+    <span>Teatro Victoria (Barcelona)</span>
+    <a
+      class={`
+      border-primary border-2 bg-secondary  font-medium px-4 py-1 hover:bg-primary hover:text-secondary hover:scale-125 transition mt-8 text-lg 
+    `}
+      href="google.com"
+      target="_blank">Entradas agotadas</a
+    >
+  </h3>
+</section>
